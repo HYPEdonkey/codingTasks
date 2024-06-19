@@ -1,0 +1,12 @@
+<!-- notes/templates/notes/notes_detail.html-->
+
+{% extends 'base.html' %}
+
+{% block title %}Sticky Notes App - {{ note.title }}{% endblock %}
+
+{% block content %}
+    <h2>{{ note.title }}</h2>
+    <h2>{{ note.content }}</h2>
+    <h2>Created at: {{note.date_created }}</h2>
+    <a href="{% url 'notes_list' %}">Back to Note List</a>
+{% endblock %}

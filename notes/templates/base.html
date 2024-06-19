@@ -1,0 +1,27 @@
+<!-- notes/templates/base.html -->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>{% block title %}My Django App{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'notes/styles.css'}">
+</head>
+<body>
+    <header>
+        <h1>{% block header %}My Django App{% endblock %}</h1>
+        <!-- Add navigation links here or other header content-->
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <!-- Add footer content or links here -->
+    </footer>
+
+</body>
+</html>
